@@ -14,4 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "ar-serialize-helpers"
   gem.require_paths = ["lib"]
   gem.version       = ARSerializeHelpers::VERSION
+
+  gem.add_development_dependency "json"
+  gem.add_development_dependency "rspec"
 end
