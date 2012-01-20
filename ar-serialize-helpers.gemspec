@@ -13,5 +13,5 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "ar-serialize-helpers"
   gem.require_paths = ["lib"]
-  gem.version       = ArSerializeHelpers::VERSION
+  gem.version       = ARSerializeHelpers::VERSION
 end
