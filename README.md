@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-You need to require the individual helper modules you wish to use. You can either do this in an initializer
+You need to require the individual helper classes you wish to use. You can either do this in an initializer
 
     require "ar-serialize-helpers/json"
     
@@ -28,10 +28,10 @@ or in the Gemfile
     # Or for multiple modules
     gem "ar-serialize-helpers", :require => ["ar-serialize-helpers/json", "ar-serialize-helpers/integer"]
 
-Then pass the module name to the `serialize` call in the model definition
+Then pass an instance of the class to the `serialize` call in the model definition
 
     class MyModel < ActiveRecord::Base
-      serialize :my_column, ArSerializeHelpers::JSON
+      serialize :my_column, ARSerializeHelpers::JSON.new
     end
 
 ## Contributing
