@@ -1,6 +1,6 @@
 # Ar::Serialize::Helpers
 
-TODO: Write a gem description
+Collection of helpers for ActiveRecord's `serialize` method in Rails >= 3.
 
 ## Installation
 
@@ -18,7 +18,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You need to require the individual helper modules you wish to use. You can either do this in an initializer
+
+    require "ar-serialize-helpers/json"
+    
+or in the Gemfile
+
+    gem "ar-serialize-helpers", :require => "ar-serialize-helpers/json"
+    # Or for multiple modules
+    gem "ar-serialize-helpers", :require => ["ar-serialize-helpers/json", "ar-serialize-helpers/integer"]
+
+Then pass the module name to the `serialize` call in the model definition
+
+    class MyModel < ActiveRecord::Base
+      serialize :my_column, ArSerializeHelpers::JSON
+    end
 
 ## Contributing
 
@@ -27,3 +41,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+See LICENSE
