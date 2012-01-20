@@ -1,4 +1,4 @@
 require "ar-serialize-helpers/version"
 
-module ArSerializeHelpers
+module ARSerializeHelpers
 end
