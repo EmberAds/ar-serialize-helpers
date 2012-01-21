@@ -15,6 +15,13 @@ And then execute:
 Or install it yourself as:
 
     $ gem install ar-serialize-helpers
+    
+## Supported serialization formats 
+
+    * `ARSerializeHelpers::Gzip`, depends on the `gzip` gem and a `binary` attribute for storage
+    * `ARSerializeHelpers::Integer`
+    * `ARSerializeHelpers::JSON`, depends on `JSON` being available
+
 
 ## Usage
 
