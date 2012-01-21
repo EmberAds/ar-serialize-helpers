@@ -16,5 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = ARSerializeHelpers::VERSION
 
   gem.add_development_dependency "json"
+  gem.add_development_dependency "gzip"
   gem.add_development_dependency "rspec"
 end
