@@ -12,14 +12,7 @@ module ARSerializeHelpers
     end
 
     def load obj
-      serializers.reverse.reduce(obj) do |obj, serializer|
-        begin
-          serializer.load obj
-        rescue => e
-          # If we can't load for some reason, just carry on with original value
-          next(obj)
-        end
-      end
+      serializers.reverse.reduce(obj) { |obj, serializer| serializer.load obj }
     end
   end
 end
