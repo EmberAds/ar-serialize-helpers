@@ -18,7 +18,7 @@ Or install it yourself as:
     
 ## Supported serialization formats 
 
-    * `ARSerializeHelpers::Gzip`, depends on the `gzip` gem and a `binary` attribute for storage
+    * `ARSerializeHelpers::Gzip`, depends on the `activesupport` gem and a `binary` attribute for storage
     * `ARSerializeHelpers::Integer`
     * `ARSerializeHelpers::JSON`, depends on `JSON` being available
 
