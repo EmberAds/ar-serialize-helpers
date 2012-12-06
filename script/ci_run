@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Fail if any step fucks up
+set -e
+
+# Setup some stuff
+if [[ -f /var/lib/jenkins/config/setup ]]; then
+  source /var/lib/jenkins/config/setup
+fi
+
+bundle install --path=vendor/bundle
+bundle exec rspec spec
